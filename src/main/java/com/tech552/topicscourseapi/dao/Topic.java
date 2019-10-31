@@ -1,10 +1,14 @@
-package dao;
+package com.tech552.topicscourseapi.dao;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Created by makerofapps on 10/20/19.
  */
+@Entity
 public class Topic {
-
+    @Id
     private String id;
     private String name;
     private String description;

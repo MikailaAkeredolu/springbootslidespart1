@@ -1,6 +1,6 @@
 package com.tech552.topicscourseapi.controller;
 
-import dao.Topic;
+import com.tech552.topicscourseapi.dao.Topic;
 import com.tech552.topicscourseapi.services.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +24,7 @@ public class TopicController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value ="/topics/{id}")
-    public Topic getTopic(@PathVariable String id){
+    public Optional<Topic> getTopic(@PathVariable String id){
         return topicService.getTopicById(id);
     }
 
